@@ -1,0 +1,23 @@
+extends layout
+
+block content
+ h1 #{title}
+  
+ form(method='POST', action="/articles/add")
+    #form-group
+    label Title:
+     input.form-control(name='title', type='text')
+
+     #form-group
+      label Author:
+      input.form-control(name='author', type='text')
+    
+     #form-group
+      label Body:
+      .md-form.amber-textarea.active-amber-textarea-2
+      textarea#form16.md-textarea.form-control(rows='2' name='body')
+      br
+      br
+    input.btn.btn-primary(type='submit',value='submit')
+
+    

@@ -1,0 +1,23 @@
+extends layout
+
+block content
+ h1 #{title}
+ .row
+    .col-sm-6.col-md-4
+        .thumbnail
+          img(src='https://cdn.pixabay.com/photo/2017/12/29/12/09/note-3047435__340.jpg', alt='...')
+                
+          .caption
+            h3 App-Write
+                     
+            p What's on your Mind?
+                   
+            p
+
+              a.btn.btn-success(href='articles/add', role='button') Create
+              
+
+ ul.list-group
+   each article, i in articles
+    li.list-group-item
+      a(href='/article/'+article._id)= article.title
